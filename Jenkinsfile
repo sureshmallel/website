@@ -1,7 +1,7 @@
 pipeline {
   environment {
     registry = "surimallel/testjenkins"
-    registryCredential = ‘Dockerhub’
+    registryCredential = "Dockerhub"
   }
   agent any
   stages {
