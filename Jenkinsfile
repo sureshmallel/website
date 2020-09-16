@@ -3,6 +3,7 @@ pipeline {
     registry = "surimallel/testjenkins"
     registryCredential = "Dockerhub"
     def docker = "my docker"
+    docker.build = docker
   }
   agent any
   stages {
