@@ -1,0 +1,21 @@
+pipeline {
+  environment {
+    registry = "surimallel/testjenkins"
+    registryCredential = ‘Dockerhub’
+  }
+  agent any
+  stages {
+    stage('Cloning Git') {
+      steps {
+       git credentialsId: 'GithubID', url: 'https://github.com/sureshmallel/website.git'
+      }
+    }
+    stage('Building image') {
+      steps{
+        script {
+          docker.build registry + ":$BUILD_NUMBER"
+        }
+      }
+    }
+  }
+}
