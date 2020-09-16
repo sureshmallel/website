@@ -2,7 +2,7 @@ pipeline {
   environment {
     registry = "surimallel/testjenkins"
     registryCredential = "Dockerhub"
-    def docker = "my docker"
+    def docker
     dockerImage = ''
   }
   agent any
