@@ -9,7 +9,9 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git credentialsId: 'GithubID', url: 'https://github.com/sureshmallel/website.git'
+        
+git credentialsId: 'GithubID', url: 'https://github.com/sureshmallel/website.git'
+
       }
     }
     stage('Building image') {
